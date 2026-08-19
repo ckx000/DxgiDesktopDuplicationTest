@@ -1,0 +1,114 @@
+==============================
+DXGI Desktop Duplication Test Tool
+==============================
+
+Target Display: \\.\DISPLAY1
+
+Enumerating DXGI adapters...
+
+Adapter 0: Intel(R) UHD Graphics 630
+  Vendor : 0x8086
+  Device : 0x3e98
+  LUID   : 88787
+
+Adapter 1: NVIDIA GeForce RTX 2070
+  Vendor : 0x10de
+  Device : 0x1f10
+  LUID   : 89896
+
+Adapter 2: Intel(R) UHD Graphics 630
+  Vendor : 0x8086
+  Device : 0x3e98
+  LUID   : 6451162120
+
+Adapter 3: Microsoft Basic Render Driver
+  Vendor : 0x1414
+  Device : 0x8c
+  LUID   : 89859
+
+
+==============================
+STARTING DUPLICATEOUTPUT TESTS
+==============================
+
+==============================
+TEST Adapter 0 -> \\.\DISPLAY1
+==============================
+GPU Name       : Intel(R) UHD Graphics 630
+Vendor ID      : 0x8086
+Device ID      : 0x3e98
+Adapter LUID   : 0x00000000-00015ad3
+LUID uint64    : 88787
+
+[1] Find DXGI Output
+    SUCCESS
+    Output index : 0
+    DeviceName   : \\.\DISPLAY1
+    Attached     : TRUE
+    Coordinates  : 0, 0 -> 1920, 1080
+    HMONITOR     : 0x310019bb
+
+[2] D3D11CreateDevice
+    SUCCESS
+    Feature Level: 0xb000
+
+[3] QueryInterface IDXGIOutput1
+    SUCCESS
+
+[4] DuplicateOutput
+    SUCCESS
+    HRESULT: 0x00000000
+
+    Duplication description:
+      Width       : 1920
+      Height      : 1080
+      Format      : 0x57
+      RefreshRate : 142521600/2375360
+      Rotation    : 1
+
+*** DXGI DESKTOP DUPLICATION IS WORKING ***
+
+==============================
+TEST Adapter 1 -> \\.\DISPLAY1
+==============================
+GPU Name       : NVIDIA GeForce RTX 2070
+Vendor ID      : 0x10de
+Device ID      : 0x1f10
+Adapter LUID   : 0x00000000-00015f28
+LUID uint64    : 89896
+
+[1] Find DXGI Output
+    FAILED
+    This adapter does NOT expose \\.\DISPLAY1 as a DXGI Output.
+
+==============================
+TEST Adapter 2 -> \\.\DISPLAY1
+==============================
+GPU Name       : Intel(R) UHD Graphics 630
+Vendor ID      : 0x8086
+Device ID      : 0x3e98
+Adapter LUID   : 0x00000001-8084ec08
+LUID uint64    : 6451162120
+
+[1] Find DXGI Output
+    FAILED
+    This adapter does NOT expose \\.\DISPLAY1 as a DXGI Output.
+
+==============================
+TEST Adapter 3 -> \\.\DISPLAY1
+==============================
+GPU Name       : Microsoft Basic Render Driver
+Vendor ID      : 0x1414
+Device ID      : 0x8c
+Adapter LUID   : 0x00000000-00015f03
+LUID uint64    : 89859
+
+[1] Find DXGI Output
+    FAILED
+    This adapter does NOT expose \\.\DISPLAY1 as a DXGI Output.
+
+==============================
+ALL TESTS COMPLETE
+==============================
+
+Press ENTER to exit...
