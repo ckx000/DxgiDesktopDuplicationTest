@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="DxgiDesktopDuplicationTest/DxgiDesktopDuplicationTest.vcxproj" Id="18af1b6a-3908-4d5e-ad5c-c8e12e5bdb45" />
+</Solution>
