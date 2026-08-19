@@ -2,7 +2,7 @@
 
 用于实际测试 Windows DXGI Desktop Duplication 是否能够在指定 GPU 与显示器之间正常建立。
 
-与单纯枚举 DXGI Adapter 不同，本工具会进一步创建 D3D11 Device，并调用 `DuplicateOutput()` 进行实际测试。
+与[单纯枚举 DXGI Adapter](https://github.com/ckx000/DxgiDisplayEnum) 不同，本工具会进一步创建 D3D11 Device，并调用 `DuplicateOutput()` 进行实际测试。
 
 ## 功能
 
